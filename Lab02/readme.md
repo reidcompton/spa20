@@ -406,6 +406,7 @@ The CreateView will have the following code:
 </template>
 
 <script>
+import datalayer from '../datalayer'
 export default {
   name: 'create-view',
   data () {
@@ -471,6 +472,7 @@ methods: {
     datalayer.updateProduct(+this.$route.params.id, this.product)
     this.$router.push({name: 'HomeView'})
   }
+}
 ``` 
 
 Save, navigate to `/update/2`, change some values, click on the link and verify that the product gets updated and that you are sent back to the root.
